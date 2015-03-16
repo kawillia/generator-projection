@@ -1,0 +1,18 @@
+{
+  "name": "generator-projection",
+  "version": "1.0.0",
+  "description": "K&T Projection Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "files": [
+    "app"
+  ],
+  "author": "Keith Williams & Tim Allen",
+  "license": "ISC",
+  "keywords": "yeoman-generator",
+  "dependencies": {
+    "yeoman-generator": "^0.18.10"
+  }
+}
