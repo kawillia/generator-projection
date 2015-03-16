@@ -10,40 +10,40 @@ module.exports = generators.Base.extend({
     var done = this.async();
 	this.properties = [];
 	
-	var prompts = [
+    var prompts = [
     {
-		name: 'projectionName',
-		message: 'What is your Projection\'s name?'
-	},
+        name: 'projectionName',
+        message: 'What is your Projection\'s name?'
+    },
     {
-		name: 'namespace',
-		message: 'What is your Projection\'s namespace?'
-	}];
-	
-	var addPropertyConfirmPrompt = [
+        name: 'namespace',
+        message: 'What is your Projection\'s namespace?'
+    }];
+
+    var addPropertyConfirmPrompt = [
     {
-		name: 'addProperty',
-		message: 'Would you like to add a property?',
-		type: 'confirm'
-	}];
-	
-	var addPropertyPrompts = [
+        name: 'addProperty',
+        message: 'Would you like to add a property?',
+        type: 'confirm'
+    }];
+
+    var addPropertyPrompts = [
     {
-		name: 'propertyName',
-		message: 'What is your property\'s name?',
-	},
-	{
-		type: 'list',
-		name: 'propertyType',
-		message: 'What type is your property?',
-		choices: ['Int32', 'String', 'Boolean']
-	},
-	{
-		type: 'list',
-		name: 'propertyAccessModifier',
-		message: 'What is the access modifier of this property?',
-		choices: ['public', 'private']
-	}];
+        name: 'propertyName',
+        message: 'What is your property\'s name?',
+    },
+    {
+        type: 'list',
+        name: 'propertyType',
+        message: 'What type is your property?',
+        choices: ['Int32', 'String', 'Boolean']
+    },
+    {
+        type: 'list',
+        name: 'propertyAccessModifier',
+        message: 'What is the access modifier of this property?',
+        choices: ['public', 'private']
+    }];
 		
     this.prompt(prompts, function (props) {
         this.projectionName = props.projectionName;
